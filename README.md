@@ -1,5 +1,5 @@
 Assignment 8 for Cloud computing course spring 2022.
-Also on Moodle.  The Moodle version may be more up-to-date.
+Also on Moodle.  Due Feb. 25 and 10 pm. 
 
 Assignment 8 Backends
 This assignment will give you practice in setting up and using a Terraform remote backend based on AWS S3 buckets for remote state storage and a DynamoDB table for locking.  The Terraform code for creating the backend S3 bucket and DynamoDB table is included in the repository for this assignment in the subdirectory “create-s3-backend”.  The Terraform code is based on "Shared Storage for State Files" page 110 of Brikman's “Up and Running” book (available from the library) and on https://www.techcrumble.net/2020/01/how-to-configure-terraform-aws-backend-with-s3-and-dynamodb-table/.
@@ -18,7 +18,7 @@ After making these revisions, validate and apply.  Do the following before you d
 2.	Use the AWS cli to show the objects in the S3 bucket.  You might want to use the “--recursive” option.  (deliverable)
 3.	Use the AWS cli to copy the terraform.tf state file to the file “terraform.tfstate.remote” file in your local directory.
 4.	Use the AWS cli to show the names of the objects in the DynamoDB table. (deliverable)
-5.	Change the “backup.tf” file to one that specifies a “local” backend. Do “tf init -migrate-state”.  What happened?  You should how have a “terraform.tfstate” file.  Copy (don’t move) it to “terraform.tfstate.local”. Then change back to the S3 backend.tf file.  What happened?  (deliverable)
+5.	Change the “backend.tf” file to one that specifies a “local” backend. Do “tf init -migrate-state”.  What happened?  You should how have a “terraform.tfstate” file.  Copy (don’t move) it to “terraform.tfstate.local”. Then change back to the S3 backend.tf file.  What happened?  (deliverable)
 Do a “terraform destroy” in the directory that uses the backend.
 Do a “terraform destroy” in the directory that creates the backend.  What steps did you need to do to delete the S3 bucket?  (deliverable)
 Deliverables:
