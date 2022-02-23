@@ -1,0 +1,9 @@
+terraform {
+  backend "s3" {
+    # The name of the bucket below needs to be changed to your bucket
+    bucket         = "tc-remotestate-52661"
+    key            = "terraform-aws/terraform.tfstate"
+    region         = "us-west-2"
+    dynamodb_table = "umcs-remote-state-lock"
+  }
+}
